@@ -1,12 +1,12 @@
 package org.example
 
 class UserInput {
-    fun UserInputList(): List<Int> {
+    fun userInputList(): List<Int> {
         var userNum: List<Int> = emptyList()
 
         do {
             print("숫자를 입력하세요 :")
-            val input = readLine() ?: ""
+            val input = readlnOrNull() ?: ""
 
             //숫자가 아니어서 올바르지 않은 입력값
             if (!input.all { it.isDigit() }) { // 입력받은 문자를 숫자로 바꿔

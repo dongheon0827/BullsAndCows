@@ -1,8 +1,6 @@
 package org.example
 
-var GameRecord = BncRecord()
-
-fun bncMain() {
+fun bncMain(gameRecord: BncRecord) {
     val randNum = MakeAnswer()
     val userInput = UserInput()
     println("게임을 시작합니다. 숫자를 입력하세요")
@@ -11,7 +9,7 @@ fun bncMain() {
         var strike = 0
         var ball = 0
 
-        val userNum = userInput.UserInputList()
+        val userNum = userInput.userInputList()
 
         count++
 
@@ -25,14 +23,12 @@ fun bncMain() {
                 ball++
             }
         }
-        println("$count 번째, $strike 스트라이크, $ball 볼")
-        if(strike==3) {
+        if (strike == 0 && ball == 0) println("Nothing")
+        else println("${count}번째, ${strike}스트라이크, ${ball}볼")
+        if (strike == 3) {
             println("정답입니다")
-            GameRecord.addRecord(count)
+            gameRecord.addRecord(count)
             break
         }
     }
-}
-fun bncRecord() {
-    GameRecord.printRecord()
 }
