@@ -1,13 +1,13 @@
 package org.example
 
-fun main(){
-    var selectNum: Int
+fun main() {
+
     while (true) {
         println("1.게임 시작하기 2.게임 기록 보기 3.종료하기")
-        selectNum = readln().toInt()
+        val selectNum: Int = readln().toInt()
         when (selectNum) {
             1 -> bncMain()
-            2 -> BncRecord()
+            2 -> bncRecord()
             3 -> {
                 println("숫자 야구 게임을 종료합니다")
                 return
