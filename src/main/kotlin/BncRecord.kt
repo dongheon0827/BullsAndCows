@@ -3,11 +3,11 @@ package org.example
 class BncRecord {
     private val record: MutableList<Int> = mutableListOf()
 
-    fun addRecord(count: Int) {
+    fun add(count: Int) {
         record.add(count)
     }
 
-    fun printRecord() {
+    fun print() {
         if (record.isEmpty()) {
             println("기록이 없습니다")
             return
